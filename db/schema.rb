@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20130926022350) do
   enable_extension "plpgsql"
 
   create_table "repositories", force: true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "url"
+    t.string   "title",       null: false
+    t.text     "description", null: false
+    t.string   "url",         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
